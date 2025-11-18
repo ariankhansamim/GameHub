@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AKSAM Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" class="logo-icon" aria-hidden>
+          <path d="M12 2L2 12l10 10 10-10L12 2zM12 18l-6-6 6-6 6 6-6 6z" />
+          <circle cx="12" cy="12" r="2" stroke-width="1.5" />
+      </svg>
+      <div>
+        <h1>AKSAM HUB</h1>
+        <p class="subtitle">Easy Fast. Play now.</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search games..." aria-label="Search games">
+      <select id="filter">
+        <option value="all">All Genres</option>
+        <option value="classic">Classic</option>
+        <option value="arcade">Arcade</option>
+        <option value="puzzle">Puzzle</option>
+        <option value="skill">Skill</option>
+        <option value="fun">Fun</option>
+        <option value="trivia">Trivia</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2 id="modalTitle">Game</h2>
+        <div>
+          <a id="openNewTab" class="btn" target="_blank" rel="noopener">Open in new tab</a>
+          <button id="closeBtn" class="btn alt">✕</button>
+        </div>
+      </div>
+      <div class="iframe-wrap" >
+        <iframe id="gameFrame" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <small>Made with ♥ SAMIM ABDULLAHI · Modern neon UI</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
